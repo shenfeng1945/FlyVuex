@@ -5,4 +5,16 @@
   "repository": "git@github.com:shenfeng1945/FlyVuex.git",
   "author": "shenfeng1945 <823902826@qq.com>",
   "license": "MIT"
+  "scripts": {
+    "dev": "node ./examples/dev-server.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  }
 }
