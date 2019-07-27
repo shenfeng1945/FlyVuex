@@ -6,7 +6,8 @@
   "author": "shenfeng1945 <823902826@qq.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node ./examples/dev-server.js"
+    "dev": "node ./examples/dev-server.js",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
