@@ -1,10 +1,17 @@
 import Vue from 'vue';
-
+import modules from './store/index';
+import {mergeState, mergeActions} from 'FlyVuex';
 new Vue({
-    el: '#app',
-    data(){
-        return {
-            number: 1
-        }
-    }
+  el: '#app',
+  modules,
+  data(){
+      return {
+      }
+  },
+  computed: {
+    ...mergeState(['counter.number'])
+  },
+  methods: {
+    ...mergeActions(['counter.add'])
+  },
 })

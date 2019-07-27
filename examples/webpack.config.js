@@ -1,8 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
-// const url = 'http://localhost:8000';
+const url = 'http://localhost:8000';
 
 const devServer = {
     hot: true,
@@ -30,8 +31,8 @@ module.exports = {
     context: path.resolve(__dirname, '.'),
     entry: {
         app: [
-            'webpack/hot/dev-server',
-            'webpack-dev-server/client?http://localhost:8000/',
+           'webpack/hot/dev-server',
+           'webpack-dev-server/client?http://localhost:8000/',
             path.resolve(__dirname, './main.js')
         ]
     },
@@ -76,6 +77,7 @@ module.exports = {
                 collapseWhitespace: true,
                 removeAttributeQuotes: false
             }
-        })
+        }),
+        new OpenBrowserPlugin({url})
     ]
 }
